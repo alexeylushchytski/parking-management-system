@@ -57,8 +57,8 @@ export default class Landing extends React.Component {
             items.push(<tr>
                 <td>{this.state.users[i].user_name}</td>
                 <td>{this.state.users[i].user_address}</td>
-                <td><Link to={`vehicle/${userId}`}>Add Vehicle</Link></td>
-                <td><Link to={`grabSpot/${userId}`}>Grab Spot</Link></td>
+                <td><Link to={`vehicle/${userId}`}><i class="fa fa-car" aria-hidden="true"></i></Link></td>
+                <td><Link to={`grabSpot/${userId}`}><i class="fa fa-hand-rock-o" aria-hidden="true"></i></Link></td>
             </tr>);
         }
         return items;
@@ -76,9 +76,9 @@ export default class Landing extends React.Component {
                     name='firstName'
                     value={this.state.userId}
                     onChange={this.handleInputChange} /><br />
-                <input type='button' value='Search' onClick={() => { this.getUser() }} />
-                <input type='button' value='All users' onClick={() => { this.getAllUsers() }} />
-                <Link to='/addUser'>Add User</Link>
+                <input class='btn' type='button' value='Search' onClick={() => { this.getUser() }} />
+                <input class='btn' type='button' value='All users' onClick={() => { this.getAllUsers() }} />
+                <Link to='/addUser'>Add User <i class="fa fa-user-plus" aria-hidden="true"></i></Link>
                 <h1>List Of Users</h1>
                 <table class="pure-table pure-table-horizontal">
                     <tr>

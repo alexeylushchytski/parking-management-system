@@ -75,7 +75,7 @@ export default class GrabSpot extends React.Component {
             }
         }
         for(i=1; i <= totalSpot; i++) {
-            items.push(<input type='button' value={i} onClick={() => alert(i)}/>);
+            items.push(<input type='button' value={i} onClick={() => alert("Permit Number : " + Math.floor((Math.random() * 1000000) + 1) + " . Spot occupied")}/>);
         }
         return items;
     }
@@ -85,15 +85,17 @@ export default class GrabSpot extends React.Component {
             <div class='form'>
                 <h1>Grab Spot</h1>
                 <label>Campus:</label>
-                <select name='campus' value={this.state.campus} onChange={this.handleInputChange}>
+                <select class='select' name='campus' value={this.state.campus} onChange={this.handleInputChange}>
                     {this.createCampusSelectItems()}
                 </select>
-                <select name='selectedParkingLot' value={this.state.parkingLot} onChange={this.handleInputChange}>
+                <label>Parking Lot</label>
+                <select class='select' name='selectedParkingLot' value={this.state.parkingLot} onChange={this.handleInputChange}>
                     {this.createParkingLotSelectItems()}
                 </select>
                 
                 <h1>List of Spots</h1>
                 {this.getSpots()}
+                <br/>
                 <Link to='/'>List of Users</Link>
             </div>
         );

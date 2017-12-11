@@ -92,7 +92,7 @@ export default class Vehicle extends React.Component {
                 <input class='input textbox' type='text' name='model'value={this.state.firstName} onChange={this.handleInputChange}/>
                 <label>Color:</label>
                 <input class='input textbox' type='text' name='color' value={this.state.firstName} onChange={this.handleInputChange}/>
-                <input type='button' value='Add' onClick={() => { this.addVehicle() }}/>
+                <input class='btn' type='button' value='Add' onClick={() => { this.addVehicle() }}/>
                 <Link to='/'>List of Users</Link>
             </div>
         );

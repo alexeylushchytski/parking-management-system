@@ -94,14 +94,14 @@ export default class AddUser extends React.Component {
                 <label>Address:</label>
                 <input class='input textbox' type='text' name='address' value={this.state.address} onChange={this.handleInputChange} />
                 <label>User Type:</label>
-                <select name='userType' value={this.state.userType} onChange={this.handleInputChange}>
+                <select class='select' name='userType' value={this.state.userType} onChange={this.handleInputChange}>
                     {this.createUserTypeSelectItems()}
                 </select>
                 <label>Campus:</label>
-                <select name='campus' value={this.state.campus} onChange={this.handleInputChange}>
+                <select class='select' name='campus' value={this.state.campus} onChange={this.handleInputChange}>
                     {this.createCampusSelectItems()}
                 </select>
-                <input type='button' value='Add' onClick={() => { this.addUser() }} />
+                <input class='btn' type='button' value='Add' onClick={() => { this.addUser() }} />
                 <Link to='/'>List of Users</Link>
             </div>
         );
